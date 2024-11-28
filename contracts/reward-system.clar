@@ -2,3 +2,4 @@
 (define-map student-progress
   {student: principal}
   {completed-challenges: uint})
+  (define-constant nft-price u10) ;; NFT costs 10 micro-payments
