@@ -10,3 +10,10 @@
       {completed-challenges: (+ (default-to u0 (get completed-challenges (map-get? student-progress {student: tx-sender}))) u1)})
     (ok "Challenge Completed!")
   ))
+(define-public (mint-nft (challenge-id uint))
+  (if (is-eq challenge-id u5) ;; Reward NFT after every 5 challenges
+  (let ((mint-result (nft-mint? nft-badge challenge-id tx-sender)))
+  (if (is-ok mint-result)
+    (ok "NFT Awarded!")
+    (err "NFT Failed to mint")))
+    (err "Complete more challenges to earn an NFT.")))
