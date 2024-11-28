@@ -17,3 +17,7 @@
     (ok "NFT Awarded!")
     (err "NFT Failed to mint")))
     (err "Complete more challenges to earn an NFT.")))
+(define-public (reward-payment)
+  (begin
+    ;; Replace with real token transfer call in practice
+    (ok "Micro-payment rewarded!")))
